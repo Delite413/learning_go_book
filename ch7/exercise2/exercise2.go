@@ -15,10 +15,6 @@ type League struct {
 	Wins  map[string]int
 }
 
-type Ranker interface {
-	Ranking()
-}
-
 func (l *League) MatchResult(team1 string, team1_score int, team2 string, team2_score int) {
 	if _, ok := l.Teams[team1]; !ok {
 		return
